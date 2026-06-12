@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>STERN CLUB STUDIOS</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+
     body {
       margin: 0;
       padding: 0;
@@ -14,6 +16,7 @@
       background-position: center;
       background-repeat: no-repeat;
       position: relative;
+      font-family: Arial, sans-serif; /* Deja todo lo demás en Arial */
     }
 
     #texto-titulo {
@@ -21,7 +24,7 @@
       top: 20%;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 40px;
+      font-size: 39.3px;
       font-weight: bold;
       color: #444444;
       text-align: center;
@@ -32,26 +35,28 @@
       top: 35%;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 36px; /* Tamaño ajustado */
+      font-size: 39.3px; /* Igual que las letras */
       font-weight: bold;
       color: #444444;
-      font-family: Arial, sans-serif;
+      font-family: 'Oswald', sans-serif; /* Solo el contador usa Oswald */
       text-align: center;
     }
 
     #codigo {
-      display: block;
-      margin-top: 10px;
-      text-align: center;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
       font-size: 18px;
       color: #444444;
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <div id="texto-titulo">TU PRODUCTO ES 100% AUTÉNTICO</div>
   <div id="contador">0</div>
-  <div id="codigo">A7K9-M2P4-X8Q1</div>
+  <div id="codigo">X9B3-D1FG-7ZQ4</div>
 
   <script>
     // Incremento del contador con localStorage
