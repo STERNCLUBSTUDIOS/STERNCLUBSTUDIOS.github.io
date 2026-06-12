@@ -1,44 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STERN CLUB STUDIOS</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background-image: url('fondo.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
-      font-family: Arial, sans-serif; /* Todo en Arial */
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    #contador {
-      position: absolute;
-      top: 75%;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 36px; /* Ajusta el tamaño al alto del recuadro */
-      font-weight: bold;
-      color: #444444;
-      text-align: center;
-      line-height: 1.2; /* Ajusta la altura del texto */
-      font-family: 'Oswald', sans-serif; /* Solo el contador usa Oswald */
-    }
-  </style>
+<title>STERN CLUB STUDIOS</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+
+    background-image:url('fondo.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    position:relative;
+}
+
+#contador{
+    position:absolute;
+    top:75%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-family:'Oswald', sans-serif;
+    font-size:36px;
+    font-weight:500;
+
+    color:#444444;
+
+    text-align:center;
+}
+
+</style>
+
 </head>
-<body>
-  <div id="contador">0</div>
 
-  <script>
-    let contador = localStorage.getItem("contador");
-    if (!contador) {
-      contador = 0;
-    }
-    contador++;
-    localStorage.setItem("contador", contador);
-    document.getElementById("contador"
+<body>
+
+<div id="contador">0</div>
+
+<script>
+
+let contador = localStorage.getItem("contador");
+
+if (contador === null) {
+    contador = 0;
+} else {
+    contador = parseInt(contador);
+}
+
+contador++;
+
+localStorage.setItem("contador", contador);
+
+document.getElementById("contador").innerText = contador;
+
+</script>
+
+</body>
+</html>
