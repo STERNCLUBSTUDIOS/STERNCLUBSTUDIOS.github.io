@@ -49,7 +49,16 @@ body{
 
 <script>
 
-let contador = localStorage.getItem("contador");
+/* =====================================
+   CODIGO DE LA GORRA
+   CAMBIALO AQUI CUANDO HAGAS OTRA
+===================================== */
+
+const codigoGorra = "A7K9M2P4X8Q1";
+
+/* ===================================== */
+
+let contador = localStorage.getItem(codigoGorra);
 
 if (contador === null) {
     contador = 0;
@@ -59,7 +68,7 @@ if (contador === null) {
 
 contador++;
 
-localStorage.setItem("contador", contador);
+localStorage.setItem(codigoGorra, contador);
 
 document.getElementById("contador").innerText = contador;
 
