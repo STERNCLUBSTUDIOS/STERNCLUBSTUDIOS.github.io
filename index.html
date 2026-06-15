@@ -53,7 +53,7 @@
             async function actualizarContador() {
                 try {
                     const respuesta = await fetch(
-                        `${SUPABASE_URL}/chip%20gorras?IDGORRA=eq.${codigoGorra}&select=*`,
+                        `${SUPABASE_URL}/CHIPSGORRAS?IDGORRA=eq.${codigoGorra}&select=*`,
                         {
                             headers: {
                                 "apikey": SUPABASE_KEY,
@@ -73,7 +73,7 @@
                     contadorActual++;
 
                     await fetch(
-                        `${SUPABASE_URL}/chip%20gorras?IDGORRA=eq.${codigoGorra}`,
+                        `${SUPABASE_URL}/CHIPSGORRAS?IDGORRA=eq.${codigoGorra}`,
                         {
                             method: "PATCH",
                             headers: {
