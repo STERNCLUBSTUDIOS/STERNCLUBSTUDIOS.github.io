@@ -15,7 +15,6 @@ body{
     padding:0;
     height:100vh;
 
-    background-image:url('fondo.png');
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -85,6 +84,12 @@ async function actualizarContador() {
             return;
         }
 
+        const imagen = datos[0].IMAGEN;
+
+        if (imagen) {
+            document.body.style.backgroundImage = `url('${imagen}')`;
+        }
+
         let contadorActual = Number(datos[0].CONTADOR || 0);
 
         contadorActual++;
@@ -127,3 +132,4 @@ actualizarContador();
 
 </body>
 </html>
+
